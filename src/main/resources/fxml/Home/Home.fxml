@@ -7,158 +7,169 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-            minWidth="800" minHeight="600"
-            prefWidth="1024" prefHeight="780">
+            minWidth="800" minHeight="600">
     <!-- Left Sidebar -->
     <left>
-        <VBox styleClass="sidebar">
-            <!-- Logo -->
-            <HBox styleClass="logo-container">
-                <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
-                    <image>
-                        <Image url="@../../images/milktea_icon.png"/>
-                    </image>    
-                </ImageView>
-                <Label text="Chào bạn, Admin" styleClass="logo_name"/>
-                <padding>
-                    <Insets top="20" right="20" bottom="20" left="20"/>
-                </padding>
-            </HBox>
+        <ScrollPane fitToWidth="true" vbarPolicy="AS_NEEDED" hbarPolicy="NEVER" prefViewportWidth="280">
+            <VBox styleClass="sidebar" minWidth="280">
+                <!-- Logo -->
+                <HBox styleClass="logo-container">
+                    <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
+                        <image>
+                            <Image url="@../../images/milktea_icon.png"/>
+                        </image>    
+                    </ImageView>
+                    <Label text="Chào bạn, Admin" styleClass="logo_name"/>
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </HBox>
 
-            <!-- Main Menu -->
-            <VBox styleClass="menu-section" spacing="10">
-                <padding>
-                    <Insets top="20" right="0" bottom="20" left="0"/>
-                </padding>
-                <Label text="MAIN MENU" styleClass="menu-header"/>
-                <VBox spacing="5" styleClass="nav-menu">
-                    <Button styleClass="nav-button" text="Dashboard">
+                <!-- Main Menu -->
+                <VBox styleClass="menu-section" spacing="10">
+                    <padding>
+                        <Insets top="20" right="0" bottom="20" left="0"/>
+                    </padding>
+                    <Label text="MAIN MENU" styleClass="menu-header"/>
+                    <VBox spacing="5" styleClass="nav-menu">
+                        <Button styleClass="nav-button" text="Dashboard">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-home" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-user" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-mug-hot" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Đơn Hàng">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-receipt" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Thống Kê">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-chart-bar" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                    </VBox>
+                </VBox>
+
+                <!-- Additional Menu -->
+                <VBox styleClass="menu-section" spacing="10">
+                    <padding>
+                        <Insets top="20" right="0" bottom="20" left="0"/>
+                    </padding>
+                    <Label text="MY DATA" styleClass="menu-header"/>
+                    <Button styleClass="nav-button" text="TEST">
                         <graphic>
-                            <FontIcon iconLiteral="fas-home" iconSize="20"/>
+                            <FontIcon iconLiteral="fas-image" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Separator styleClass="nav-separator"/>
-                    <Button styleClass="nav-button" text="Quản Lí Nhân Viên">
+                    <Button styleClass="nav-button" text="TEST">
                         <graphic>
-                            <FontIcon iconLiteral="fas-user" iconSize="20"/>
+                            <FontIcon iconLiteral="fas-file" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Separator styleClass="nav-separator"/>
-                    <Button styleClass="nav-button" text="Quản Lí Hàng Hoá">
+                    <Button styleClass="nav-button" text="TEST">
                         <graphic>
-                            <FontIcon iconLiteral="fas-mug-hot" iconSize="20"/>
+                            <FontIcon iconLiteral="fas-plus" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Separator styleClass="nav-separator"/>
-                    <Button styleClass="nav-button" text="Quản Lí Đơn Hàng">
+                    <Button styleClass="nav-button" text="TEST">
                         <graphic>
-                            <FontIcon iconLiteral="fas-receipt" iconSize="20"/>
+                            <FontIcon iconLiteral="fas-ellipsis-h" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Separator styleClass="nav-separator"/>
-                    <Button styleClass="nav-button" text="Thống Kê">
+                    <Button styleClass="nav-button" text="Logout">
                         <graphic>
-                            <FontIcon iconLiteral="fas-chart-bar" iconSize="20"/>
+                            <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20"/>
                         </graphic>
                     </Button>
                 </VBox>
             </VBox>
-
-            <!-- Additional Menu -->
-            <VBox styleClass="menu-section" spacing="10">
-                <padding>
-                    <Insets top="20" right="0" bottom="20" left="0"/>
-                </padding>
-                <Label text="MY DATA" styleClass="menu-header"/>
-                <Button styleClass="nav-button" text="TEST">
-                    <graphic>
-                        <FontIcon iconLiteral="fas-image" iconSize="20"/>
-                    </graphic>
-                </Button>
-                <Button styleClass="nav-button" text="TEST">
-                    <graphic>
-                        <FontIcon iconLiteral="fas-file" iconSize="20"/>
-                    </graphic>
-                </Button>
-                <Button styleClass="nav-button" text="TEST">
-                    <graphic>
-                        <FontIcon iconLiteral="fas-plus" iconSize="20"/>
-                    </graphic>
-                </Button>
-                <Button styleClass="nav-button" text="TEST">
-                    <graphic>
-                        <FontIcon iconLiteral="fas-ellipsis-h" iconSize="20"/>
-                    </graphic>
-                </Button>
-                <Button styleClass="nav-button" text="Logout">
-                    <graphic>
-                        <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20"/>
-                    </graphic>
-                </Button>
-            </VBox>
-        </VBox>
+        </ScrollPane>
     </left>
 
     <!-- Main Content -->
     <center>
-        <VBox spacing="30">
-            <!-- Search Bar -->
-            <HBox styleClass="search-container">
-                <padding>
-                    <Insets top="30" right="40" bottom="20" left="40"/>
-                </padding>
-                <HBox styleClass="search-box" HBox.hgrow="ALWAYS">
-                    <FontIcon iconLiteral="fas-search" iconSize="16"/>
-                    <TextField promptText="Search ..." styleClass="search-field" HBox.hgrow="ALWAYS"/>
+        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
+            <VBox spacing="30" minWidth="800">
+                <!-- Search Bar -->
+                <HBox styleClass="search-container" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets top="30" right="40" bottom="20" left="40"/>
+                    </padding>
+                    <HBox styleClass="search-box" HBox.hgrow="ALWAYS">
+                        <FontIcon iconLiteral="fas-search" iconSize="16"/>
+                        <TextField promptText="Tìm kiếm..." styleClass="search-field" HBox.hgrow="ALWAYS"/>
+                    </HBox>
                 </HBox>
-            </HBox>
 
-            <!-- Stats Cards -->
-            <HBox styleClass="stats-container" spacing="25">
-                <padding>
-                    <Insets left="40" right="40"/>
-                </padding>
-                <!-- Stock Total Card -->
-                <VBox styleClass="stats-card,products">
-                    <FontIcon iconLiteral="fas-box-open" styleClass="icon"/>
-                    <Label text="Stock Total" styleClass="title"/>
-                    <Label text="2000$" styleClass="value"/>
-                    <Label text="Increased by 60%" styleClass="subtitle"/>
+                <!-- Stats Cards -->
+                <HBox styleClass="stats-container" spacing="25" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets left="40" right="40"/>
+                    </padding>
+                    <!-- Stock Total Card -->
+                    <VBox styleClass="stats-card,products">
+                        <FontIcon iconLiteral="fas-box-open" styleClass="icon"/>
+                        <Label text="Stock Total" styleClass="title"/>
+                        <Label text="2000$" styleClass="value"/>
+                        <Label text="Increased by 60%" styleClass="subtitle"/>
+                    </VBox>
+
+                    <!-- Total Profit Card -->
+                    <VBox styleClass="stats-card,revenue">
+                        <FontIcon iconLiteral="fas-dollar-sign" styleClass="icon"/>
+                        <Label text="Total Profit" styleClass="title"/>
+                        <Label text="1500$" styleClass="value"/>
+                        <Label text="Increased by 25%" styleClass="subtitle"/>
+                    </VBox>
+
+                    <!-- Unique Visitors Card -->
+                    <VBox styleClass="stats-card,customers">
+                        <FontIcon iconLiteral="fas-users" styleClass="icon"/>
+                        <Label text="Unique Visitors" styleClass="title"/>
+                        <Label text="30000$" styleClass="value"/>
+                        <Label text="Increased by 70%" styleClass="subtitle"/>
+                    </VBox>
+                </HBox>
+
+                <!-- Charts Section -->
+                <HBox spacing="25" HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets left="40" right="40"/>
+                    </padding>
+                    <!-- ... charts content ... -->
+                </HBox>
+
+                <!-- Recent Orders -->
+                <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets left="40" right="40" bottom="40"/>
+                    </padding>
+                    <Label text="Standard Table Design" styleClass="section-title"/>
+                    <TableView fx:id="userTable" VBox.vgrow="ALWAYS" styleClass="order-table">
+                        <columns>
+                            <TableColumn text="Name" prefWidth="150"/>
+                            <TableColumn text="Email" prefWidth="250"/>
+                            <TableColumn text="User Type" prefWidth="150"/>
+                            <TableColumn text="Joined" prefWidth="150"/>
+                            <TableColumn text="Status" prefWidth="150"/>
+                        </columns>
+                    </TableView>
                 </VBox>
-
-                <!-- Total Profit Card -->
-                <VBox styleClass="stats-card,revenue">
-                    <FontIcon iconLiteral="fas-dollar-sign" styleClass="icon"/>
-                    <Label text="Total Profit" styleClass="title"/>
-                    <Label text="1500$" styleClass="value"/>
-                    <Label text="Increased by 25%" styleClass="subtitle"/>
-                </VBox>
-
-                <!-- Unique Visitors Card -->
-                <VBox styleClass="stats-card,customers">
-                    <FontIcon iconLiteral="fas-users" styleClass="icon"/>
-                    <Label text="Unique Visitors" styleClass="title"/>
-                    <Label text="30000$" styleClass="value"/>
-                    <Label text="Increased by 70%" styleClass="subtitle"/>
-                </VBox>
-            </HBox>
-
-            <!-- User Table -->
-            <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
-                <padding>
-                    <Insets left="40" right="40" bottom="40"/>
-                </padding>
-                <Label text="Standard Table Design" styleClass="section-title"/>
-                <TableView fx:id="userTable" VBox.vgrow="ALWAYS" styleClass="order-table">
-                    <columns>
-                        <TableColumn text="Name" prefWidth="150"/>
-                        <TableColumn text="Email" prefWidth="250"/>
-                        <TableColumn text="User Type" prefWidth="150"/>
-                        <TableColumn text="Joined" prefWidth="150"/>
-                        <TableColumn text="Status" prefWidth="150"/>
-                    </columns>
-                </TableView>
             </VBox>
-        </VBox>
+        </ScrollPane>
     </center>
 </BorderPane>
