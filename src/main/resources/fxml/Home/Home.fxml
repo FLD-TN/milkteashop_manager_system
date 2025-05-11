@@ -6,12 +6,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-            minWidth="800" minHeight="600">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <!-- Left Sidebar -->
     <left>
-        <ScrollPane fitToWidth="true" vbarPolicy="AS_NEEDED" hbarPolicy="NEVER" prefViewportWidth="280">
-            <VBox styleClass="sidebar" minWidth="280">
+            <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
                 <!-- Logo -->
                 <HBox styleClass="logo-container">
                     <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
@@ -65,39 +63,30 @@
                 </VBox>
 
                 <!-- Additional Menu -->
-                <VBox styleClass="menu-section" spacing="10">
+                <VBox styleClass="menu-section" spacing="5">
                     <padding>
                         <Insets top="20" right="0" bottom="20" left="0"/>
                     </padding>
                     <Label text="MY DATA" styleClass="menu-header"/>
                     <Button styleClass="nav-button" text="TEST">
                         <graphic>
-                            <FontIcon iconLiteral="fas-image" iconSize="20"/>
-                        </graphic>
-                    </Button>
-                    <Button styleClass="nav-button" text="TEST">
-                        <graphic>
-                            <FontIcon iconLiteral="fas-file" iconSize="20"/>
-                        </graphic>
-                    </Button>
-                    <Button styleClass="nav-button" text="TEST">
-                        <graphic>
                             <FontIcon iconLiteral="fas-plus" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Button styleClass="nav-button" text="TEST">
+                    <Separator styleClass="nav-separator"/>
+                    <Button styleClass="nav-button" text="Tuỳ Chọn Khác...">
                         <graphic>
                             <FontIcon iconLiteral="fas-ellipsis-h" iconSize="20"/>
                         </graphic>
                     </Button>
-                    <Button styleClass="nav-button" text="Logout">
+                    <Separator styleClass="nav-separator"/>
+                    <Button styleClass="nav-button" text="Đăng Xuất">
                         <graphic>
                             <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20"/>
                         </graphic>
                     </Button>
                 </VBox>
             </VBox>
-        </ScrollPane>
     </left>
 
     <!-- Main Content -->

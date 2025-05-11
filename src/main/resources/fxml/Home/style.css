@@ -19,6 +19,8 @@
     -fx-pref-width: 280px;
     -fx-padding: 0;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
 }
 
 .logo-container {
@@ -39,6 +41,8 @@
 
 .menu-section {
     -fx-padding: 10 0;
+    -fx-pref-height: -1;
+    -fx-max-height: -1;
 }
 
 .menu-header {
@@ -61,12 +65,12 @@
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 14px;
-    -fx-padding: 15 25;
+    -fx-padding: 10 20;
     -fx-alignment: CENTER_LEFT;
     -fx-graphic-text-gap: 15;
     -fx-cursor: hand;
     -fx-min-width: -fx-sidebar-width;
-    -fx-margin:-1;
+
 }
 
 .nav-button:hover {

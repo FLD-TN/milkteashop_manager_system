@@ -24,20 +24,11 @@ public class Main extends Application {
         primaryStage.setTitle("Quản Lí Trà Sữa Futuree");
         scene.getStylesheets().add(getClass().getResource("/fxml/Home/style.css").toExternalForm());
 
-        Screen screen = Screen.getPrimary();
-        Rectangle2D bounds = screen.getVisualBounds();
-
-        primaryStage.setWidth(1024);
-        primaryStage.setHeight(768);
-
-        primaryStage.setX(bounds.getMinX() + (bounds.getWidth() - 1024) / 2);
-        primaryStage.setY(bounds.getMinY() + (bounds.getHeight() - 768) / 2);
-
-        primaryStage.setResizable(true);
-        primaryStage.setMinWidth(1024);
-        primaryStage.setMinHeight(768);
-
-        primaryStage.setMaximized(true);
+        // Set default and minimum window size
+        primaryStage.setWidth(1270);
+        primaryStage.setHeight(730);
+        primaryStage.setMinWidth(1270);
+        primaryStage.setMinHeight(730);
 
         primaryStage.setScene(scene);
         primaryStage.show();
