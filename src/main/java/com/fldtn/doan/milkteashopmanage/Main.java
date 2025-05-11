@@ -2,11 +2,9 @@ package com.fldtn.doan.milkteashopmanage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -14,7 +12,7 @@ import javax.swing.*;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Home/Home.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
@@ -22,7 +20,7 @@ public class Main extends Application {
         primaryStage.getIcons().add(icon);
 
         primaryStage.setTitle("Quản Lí Trà Sữa Futuree");
-        scene.getStylesheets().add(getClass().getResource("/fxml/Home/style.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/Layout/Layouts/Home/style.css").toExternalForm());
 
         // Set default and minimum window size
         primaryStage.setWidth(1270);

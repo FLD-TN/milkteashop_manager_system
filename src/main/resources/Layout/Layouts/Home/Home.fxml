@@ -6,7 +6,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fldtn.doan.milkteashopmanage.controller.HomeController">
     <!-- Left Sidebar -->
     <left>
             <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
@@ -36,7 +36,7 @@
                             </graphic>
                         </Button>
                         <Separator styleClass="nav-separator"/>
-                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên">
+                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên" onAction="#navigateToUsersManage">
                             <graphic>
                                 <FontIcon iconLiteral="fas-user" iconSize="20"/>
                             </graphic>
