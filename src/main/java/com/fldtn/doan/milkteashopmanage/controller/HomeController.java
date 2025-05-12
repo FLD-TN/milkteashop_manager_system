@@ -18,9 +18,8 @@ public class HomeController {
 
         System.out.println("Navigating to UsersManage.fxml");
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Layout/Layouts/UsersManage/UsersManage.fxml"));
-            Parent root = loader.load();
-
+           Parent root =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/UsersManage/UsersManage.fxml"));
+        
             // Get the current stage from the event source
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 

@@ -36,7 +36,7 @@
                             </graphic>
                         </Button>
                         <Separator styleClass="nav-separator"/>
-                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên" onAction="#navigateToUsersManage">
+                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên" onAction="#showUsersManage">
                             <graphic>
                                 <FontIcon iconLiteral="fas-user" iconSize="20"/>
                             </graphic>
@@ -90,8 +90,8 @@
     </left>
 
     <!-- Main Content -->
+    <center>
     <BorderPane fx:id="mainContent" maxWidth="Infinity" maxHeight="Infinity">
-        <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
             <VBox spacing="30" minWidth="800">
                 <!-- Search Bar -->
                 <HBox styleClass="search-container" HBox.hgrow="ALWAYS">
@@ -159,6 +159,6 @@
                     </TableView>
                 </VBox>
             </VBox>
-        </ScrollPane>
     </BorderPane>
+    </center>
 </BorderPane>

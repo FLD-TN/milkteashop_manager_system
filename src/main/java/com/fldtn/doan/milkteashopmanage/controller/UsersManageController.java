@@ -15,8 +15,8 @@ public class UsersManageController {
     public void backToDashboard(ActionEvent event) {
         try {
             // Load the FXML and CSS
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
-            Parent root = loader.load();
+             Parent root =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
+       
 
             // Add CSS if exists
             String cssPath = "/Layout/Layouts/Home/style.css";

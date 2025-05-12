@@ -10,8 +10,7 @@ import javafx.stage.Stage;
 public class Main extends Application { 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
-        Parent root = loader.load();
+        Parent root  =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
         Scene scene = new Scene(root);
 
         Image icon = new Image(getClass().getResourceAsStream("/images/milktea_icon.png"));
