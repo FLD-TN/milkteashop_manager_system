@@ -4,53 +4,59 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-fx:controller="com.fldtn.doan.milkteashopmanage.controller.UsersManageController">
-    <!-- Top Section -->
-    <top>
-        <HBox styleClass="header" spacing="10" alignment="CENTER_LEFT">
-            <padding>
-                <Insets top="10" right="10" bottom="10" left="10"/>
-            </padding>
-            <Label text="User Management" styleClass="header-title"/>
-        </HBox>
-    </top>
+<BorderPane
+  xmlns="http://javafx.com/javafx/17"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.fldtn.doan.milkteashopmanage.controller.UsersManageController"
+>
+  <!-- Top Section -->
+  <top>
+    <HBox styleClass="header" spacing="10" alignment="CENTER_LEFT">
+      <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+      </padding>
+      <label text="User Management" styleClass="header-title" />
+    </HBox>
+  </top>
 
-    <!-- Center Section -->
-    <center>
-        <VBox spacing="20">
-            <padding>
-                <Insets top="20" right="20" bottom="20" left="20"/>
-            </padding>
-            <!-- Search Bar -->
-            <HBox spacing="10" alignment="CENTER_LEFT">
-                <Label text="Search:"/>
-                <TextField promptText="Enter username or email..." HBox.hgrow="ALWAYS"/>
-                <Button text="Search"/>
-            </HBox>
+  <!-- Center Section -->
+  <center>
+    <VBox spacing="20">
+      <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+      </padding>
+      <!-- Search Bar -->
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <label text="Search:" />
+        <TextField
+          promptText="Enter username or email..."
+          HBox.hgrow="ALWAYS"
+        />
+        <button text="Search" />
+      </HBox>
 
-            <!-- User Table -->
-            <TableView fx:id="userTable" VBox.vgrow="ALWAYS">
-                <columns>
-                    <TableColumn text="Name" prefWidth="150"/>
-                    <TableColumn text="Email" prefWidth="250"/>
-                    <TableColumn text="Role" prefWidth="150"/>
-                    <TableColumn text="Status" prefWidth="100"/>
-                </columns>
-            </TableView>
-        </VBox>
-    </center>
+      <!-- User Table -->
 
-    <!-- Bottom Section -->
-    <bottom>
-        <HBox spacing="10" alignment="CENTER_RIGHT">
-            <padding>
-                <Insets top="10" right="10" bottom="10" left="10"/>
-            </padding>
-            <Button text="Back To Dashboard" onAction="#backToDashboard"></Button>
-            <Button text="Add User"/>
-            <Button text="Edit User"/>
-            <Button text="Delete User"/>
-        </HBox>
-    </bottom>
+      <TableView fx:id="userTable" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn text="Name" prefWidth="150" />
+          <TableColumn text="Email" prefWidth="250" />
+          <TableColumn text="Role" prefWidth="150" />
+          <TableColumn text="Status" prefWidth="100" />
+        </columns>
+      </TableView>
+    </VBox>
+  </center>
+
+  <!-- Bottom Section -->
+  <bottom>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+      <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+      </padding>
+      <button text="Add User" />
+      <button text="Edit User" />
+      <button text="Delete User" />
+    </HBox>
+  </bottom>
 </BorderPane>

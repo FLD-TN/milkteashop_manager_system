@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -14,18 +13,10 @@ public class HomeController {
     private BorderPane mainContent;
 
     @FXML
-    public void navigateToUsersManage(javafx.event.ActionEvent event) {
-
-        System.out.println("Navigating to UsersManage.fxml");
+    public void showDashboard() {
         try {
-           Parent root =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/UsersManage/UsersManage.fxml"));
-        
-            // Get the current stage from the event source
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-
-            // Set the new scene
-            stage.setScene(new javafx.scene.Scene(root));
-            System.out.println("Navigated to UsersManage.fxml successfully");
+            Parent usersManage = FXMLLoader.load(getClass().getResource("/Layout/Layouts/Dashboard/Dashboard.fxml"));
+            mainContent.setCenter(usersManage);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -33,13 +24,20 @@ public class HomeController {
 
     @FXML
     public void showUsersManage() {
-        System.out.println("The function Work");
         try {
+            // Clear the current content in mainContent
+            mainContent.setCenter(null);
+
+            // Load and set the new content
             Parent usersManage = FXMLLoader.load(getClass().getResource("/Layout/Layouts/UsersManage/UsersManage.fxml"));
             mainContent.setCenter(usersManage);
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setMainContent(Parent content) {
+        mainContent.setCenter(content);
     }
 
     // @FXML
@@ -52,8 +50,5 @@ public class HomeController {
     //     }
     // }
 
-    // @FXML
-    // public void showDashboard() {
-    //     mainContent.setCenter(new Label("Welcome to the Dashboard!"));
-    // }
+
 }

@@ -6,12 +6,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import com.fldtn.doan.milkteashopmanage.controller.HomeController;
 
 public class Main extends Application { 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root  =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
+        // Load Home.fxml
+        FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
+        Parent root = homeLoader.load();
         Scene scene = new Scene(root);
+
+        // Load Dashbar.fxml and set it to mainContent
+        Parent dashboard =  FXMLLoader.load(getClass().getResource("/Layout/Layouts/Dashboard/Dashboard.fxml"));
+        HomeController homeController = homeLoader.getController();
+        homeController.setMainContent(dashboard);
 
         Image icon = new Image(getClass().getResourceAsStream("/images/milktea_icon.png"));
         primaryStage.getIcons().add(icon);

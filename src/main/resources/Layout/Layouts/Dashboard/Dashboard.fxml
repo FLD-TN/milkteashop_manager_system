@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" spacing="20" alignment="CENTER">
+    <!-- Existing content wrapped in VBox -->
+    <!-- Search Bar -->
+    <!-- Stats Cards -->
+    <VBox spacing="30" minWidth="800">
+        <!-- Search Bar -->
+        <HBox styleClass="search-container" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets top="30" right="40" bottom="20" left="40"/>
+            </padding>
+            <HBox styleClass="search-box" HBox.hgrow="ALWAYS">
+                <FontIcon iconLiteral="fas-search" iconSize="16"/>
+                <TextField promptText="Tìm kiếm..." styleClass="search-field" HBox.hgrow="ALWAYS"/>
+            </HBox>
+        </HBox>
+
+        <!-- Stats Cards -->
+        <HBox styleClass="stats-container" spacing="25" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets left="40" right="40"/>
+            </padding>
+            <!-- Stock Total Card -->
+            <VBox styleClass="stats-card,products">
+                <FontIcon iconLiteral="fas-box-open" styleClass="icon"/>
+                <Label text="Stock Total" styleClass="title"/>
+                <Label text="2000$" styleClass="value"/>
+                <Label text="Increased by 60%" styleClass="subtitle"/>
+            </VBox>
+
+            <!-- Total Profit Card -->
+            <VBox styleClass="stats-card,revenue">
+                <FontIcon iconLiteral="fas-dollar-sign" styleClass="icon"/>
+                <Label text="Total Profit" styleClass="title"/>
+                <Label text="1500$" styleClass="value"/>
+                <Label text="Increased by 25%" styleClass="subtitle"/>
+            </VBox>
+
+            <!-- Unique Visitors Card -->
+            <VBox styleClass="stats-card,customers">
+                <FontIcon iconLiteral="fas-users" styleClass="icon"/>
+                <Label text="Unique Visitors" styleClass="title"/>
+                <Label text="30000$" styleClass="value"/>
+                <Label text="Increased by 70%" styleClass="subtitle"/>
+            </VBox>
+        </HBox>
+
+        <!-- Charts Section -->
+        <HBox spacing="25" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets left="40" right="40"/>
+            </padding>
+            <!-- ... charts content ... -->
+        </HBox>
+
+        <!-- Recent Orders -->
+        <VBox styleClass="table-container" VBox.vgrow="ALWAYS">
+            <padding>
+                <Insets left="40" right="40" bottom="40"/>
+            </padding>
+            <Label text="Standard Table Design" styleClass="section-title"/>
+            <TableView fx:id="userTable" VBox.vgrow="ALWAYS" styleClass="order-table">
+                <columns>
+                    <TableColumn text="Name" prefWidth="150"/>
+                    <TableColumn text="Email" prefWidth="250"/>
+                    <TableColumn text="User Type" prefWidth="150"/>
+                    <TableColumn text="Joined" prefWidth="150"/>
+                    <TableColumn text="Status" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </VBox>
+</VBox>
+
