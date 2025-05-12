@@ -6,103 +6,91 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<BorderPane
-  xmlns="http://javafx.com/javafx/17"
-  xmlns:fx="http://javafx.com/fxml/1"
-  fx:controller="com.fldtn.doan.milkteashopmanage.controller.HomeController"
->
-  <!-- Sidebar -->
-  <left>
-    <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
-      <!-- Logo -->
-      <HBox styleClass="logo-container">
-        <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
-          <image>
-            <image url="@../../../images/milktea_icon.png" />
-          </image>
-        </ImageView>
-        <label text="Chào bạn, Admin" styleClass="logo_name" />
-        <padding>
-          <Insets top="20" right="20" bottom="20" left="20" />
-        </padding>
-      </HBox>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fldtn.doan.milkteashopmanage.controller.HomeController">
+    <!-- Sidebar -->
+     <left>
+            <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
+                <!-- Logo -->
+                <HBox styleClass="logo-container">
+                    <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
+                        <image>
+                            <Image url="@../../../images/milktea_icon.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Chào bạn, Admin" styleClass="logo_name"/>
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </HBox>
 
-      <!-- Main Menu -->
-      <VBox styleClass="menu-section" spacing="10">
-        <padding>
-          <Insets top="20" right="0" bottom="20" left="0" />
-        </padding>
-        <label text="MAIN MENU" styleClass="menu-header" />
-        <VBox spacing="5" styleClass="nav-menu">
-          <button
-            styleClass="nav-button"
-            text="Dashboard"
-            onAction="#showDashboard"
-          >
-            <graphic>
-              <FontIcon iconLiteral="fas-home" iconSize="20" />
-            </graphic>
-          </button>
-          <Separator styleClass="nav-separator" />
-          <button
-            styleClass="nav-button"
-            text="Quản Lí Nhân Viên"
-            onAction="#showUsersManage"
-          >
-            <graphic>
-              <FontIcon iconLiteral="fas-user" iconSize="20" />
-            </graphic>
-          </button>
-          <Separator styleClass="nav-separator" />
-          <button styleClass="nav-button" text="Quản Lí Hàng Hoá">
-            <graphic>
-              <FontIcon iconLiteral="fas-mug-hot" iconSize="20" />
-            </graphic>
-          </button>
-          <Separator styleClass="nav-separator" />
-          <button styleClass="nav-button" text="Quản Lí Đơn Hàng">
-            <graphic>
-              <FontIcon iconLiteral="fas-receipt" iconSize="20" />
-            </graphic>
-          </button>
-          <Separator styleClass="nav-separator" />
-          <button styleClass="nav-button" text="Thống Kê">
-            <graphic>
-              <FontIcon iconLiteral="fas-chart-bar" iconSize="20" />
-            </graphic>
-          </button>
-        </VBox>
-      </VBox>
+                <!-- Main Menu -->
+                <VBox styleClass="menu-section" spacing="10">
+                    <padding>
+                        <Insets top="20" right="0" bottom="20" left="0"/>
+                    </padding>
+                    <Label text="MAIN MENU" styleClass="menu-header"/>
+                    <VBox spacing="5" styleClass="nav-menu">
+                        <Button styleClass="nav-button" text="Dashboard" onAction="#showDashboard">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-home" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Nhân Viên" onAction="#showUsersManage">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-user" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá" >
+                            <graphic>
+                                <FontIcon iconLiteral="fas-mug-hot" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Quản Lí Đơn Hàng">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-receipt" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                        <Separator styleClass="nav-separator"/>
+                        <Button styleClass="nav-button" text="Thống Kê">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-chart-bar" iconSize="20"/>
+                            </graphic>
+                        </Button>
+                    </VBox>
+                </VBox>
 
-      <!-- Additional Menu -->
-      <VBox styleClass="menu-section" spacing="5">
-        <padding>
-          <Insets top="20" right="0" bottom="20" left="0" />
-        </padding>
-        <label text="MY DATA" styleClass="menu-header" />
-        <button styleClass="nav-button" text="TEST">
-          <graphic>
-            <FontIcon iconLiteral="fas-plus" iconSize="20" />
-          </graphic>
-        </button>
-        <Separator styleClass="nav-separator" />
-        <button styleClass="nav-button" text="Tuỳ Chọn Khác...">
-          <graphic>
-            <FontIcon iconLiteral="fas-ellipsis-h" iconSize="20" />
-          </graphic>
-        </button>
-        <Separator styleClass="nav-separator" />
-        <button styleClass="nav-button" text="Đăng Xuất">
-          <graphic>
-            <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20" />
-          </graphic>
-        </button>
-      </VBox>
-    </VBox>
-  </left>
+                <!-- Additional Menu -->
+                <VBox styleClass="menu-section" spacing="5">
+                    <padding>
+                        <Insets top="20" right="0" bottom="20" left="0"/>
+                    </padding>
+                    <Label text="MY DATA" styleClass="menu-header"/>
+                    <Button styleClass="nav-button" text="TEST">
+                        <graphic>
+                            <FontIcon iconLiteral="fas-plus" iconSize="20"/>
+                        </graphic>
+                    </Button>
+                    <Separator styleClass="nav-separator"/>
+                    <Button styleClass="nav-button" text="Tuỳ Chọn Khác...">
+                        <graphic>
+                            <FontIcon iconLiteral="fas-ellipsis-h" iconSize="20"/>
+                        </graphic>
+                    </Button>
+                    <Separator styleClass="nav-separator"/>
+                    <Button styleClass="nav-button" text="Đăng Xuất">
+                        <graphic>
+                            <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20"/>
+                        </graphic>
+                    </Button>
+                </VBox>
+            </VBox>
+    </left>
 
-  <!-- Main Content -->
-  <center>
-    <BorderPane fx:id="mainContent" maxWidth="Infinity" maxHeight="Infinity" />
-  </center>
+    <!-- Main Content -->
+    <center>
+        <BorderPane fx:id="mainContent" maxWidth="Infinity" maxHeight="Infinity" />
+    </center>
 </BorderPane>
