@@ -1,57 +1,43 @@
 package com.fldtn.doan.milkteashopmanage.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class UsersManageController {
 
     @FXML
-    private TableView<?> userTable;
+    public void backToDashboard(ActionEvent event) {
+        try {
+            // Load the FXML and CSS
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Layout/Layouts/Home/Home.fxml"));
+            Parent root = loader.load();
 
-    @FXML
-    private TableColumn<?, ?> nameColumn;
+            // Add CSS if exists
+            String cssPath = "/Layout/Layouts/Home/style.css";
+            if (getClass().getResource(cssPath) != null) {
+                root.getStylesheets().add(getClass().getResource(cssPath).toExternalForm());
+            }
 
-    @FXML
-    private TableColumn<?, ?> emailColumn;
+            // Get current stage and set new scene
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
-    @FXML
-    private TableColumn<?, ?> roleColumn;
-
-    @FXML
-    private TableColumn<?, ?> statusColumn;
-
-    @FXML
-    private TextField searchField;
-
-    @FXML
-    private Button addUserButton;
-
-    @FXML
-    private Button editUserButton;
-
-    @FXML
-    private Button deleteUserButton;
-
-    @FXML
-    public void initialize() {
-        // Initialization logic here
+        } catch (IOException e) {
+            System.err.println("Error loading Home.fxml: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    private void handleAddUser() {
-        // Logic for adding a user
-    }
-
-    @FXML
-    private void handleEditUser() {
-        // Logic for editing a user
-    }
-
-    @FXML
-    private void handleDeleteUser() {
-        // Logic for deleting a user
+    private void initialize() {
+        // Initialization code if needed
     }
 }

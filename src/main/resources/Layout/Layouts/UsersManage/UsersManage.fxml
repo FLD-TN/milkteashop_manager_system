@@ -18,7 +18,10 @@ fx:controller="com.fldtn.doan.milkteashopmanage.controller.UsersManageController
 
     <!-- Center Section -->
     <center>
-        <VBox spacing="20" padding="20">
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
             <!-- Search Bar -->
             <HBox spacing="10" alignment="CENTER_LEFT">
                 <Label text="Search:"/>
@@ -44,6 +47,7 @@ fx:controller="com.fldtn.doan.milkteashopmanage.controller.UsersManageController
             <padding>
                 <Insets top="10" right="10" bottom="10" left="10"/>
             </padding>
+            <Button text="Back To Dashboard" onAction="#backToDashboard"></Button>
             <Button text="Add User"/>
             <Button text="Edit User"/>
             <Button text="Delete User"/>

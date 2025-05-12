@@ -7,14 +7,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fldtn.doan.milkteashopmanage.controller.HomeController">
-    <!-- Left Sidebar -->
-    <left>
+    <!-- Sidebar -->
+     <left>
             <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
                 <!-- Logo -->
                 <HBox styleClass="logo-container">
                     <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
                         <image>
-                            <Image url="@../../images/milktea_icon.png"/>
+                            <Image url="@../../../images/milktea_icon.png"/>
                         </image>    
                     </ImageView>
                     <Label text="Chào bạn, Admin" styleClass="logo_name"/>
@@ -42,7 +42,7 @@
                             </graphic>
                         </Button>
                         <Separator styleClass="nav-separator"/>
-                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá">
+                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá" >
                             <graphic>
                                 <FontIcon iconLiteral="fas-mug-hot" iconSize="20"/>
                             </graphic>
@@ -90,7 +90,7 @@
     </left>
 
     <!-- Main Content -->
-    <center>
+    <BorderPane fx:id="mainContent" maxWidth="Infinity" maxHeight="Infinity">
         <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED">
             <VBox spacing="30" minWidth="800">
                 <!-- Search Bar -->
@@ -160,5 +160,5 @@
                 </VBox>
             </VBox>
         </ScrollPane>
-    </center>
+    </BorderPane>
 </BorderPane>

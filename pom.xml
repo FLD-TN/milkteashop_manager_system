@@ -70,6 +70,12 @@
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <excludes>
+                    <exclude>.idea/**</exclude>
+                </excludes>
+            </resource>
         </resources>
         <plugins>
             <plugin>
