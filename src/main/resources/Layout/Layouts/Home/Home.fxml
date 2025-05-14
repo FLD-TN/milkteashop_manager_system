@@ -12,7 +12,8 @@
             <VBox styleClass="sidebar" minWidth="280" maxHeight="Infinity">
                 <!-- Logo -->
                 <HBox styleClass="logo-container">
-                    <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image">
+                    <ImageView fitHeight="45" fitWidth="45" styleClass="logo-image"
+                    >
                         <image>
                             <Image url="@../../../images/milktea_icon.png"/>
                         </image>
