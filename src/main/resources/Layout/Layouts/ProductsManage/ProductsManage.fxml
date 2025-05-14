@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.fldtn.doan.milkteashopmanage.controller.ProductsManageController"
+            prefHeight="700.0" prefWidth="1000.0"
+            style="-fx-background-color: #f4f4f4;">
+
+       <Label text=" Đây là trang quản lí hàng hoá">
+       </Label>
+</BorderPane>

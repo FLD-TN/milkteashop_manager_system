@@ -36,6 +36,17 @@ public class HomeController {
         }
     }
 
+    @FXML
+    public void showProductsManage()
+    {
+        try {
+            Parent productsManage = FXMLLoader.load(getClass().getResource("/Layout/Layouts/ProductsManage/ProductsManage.fxml"));
+            mainContent.setCenter(productsManage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void setMainContent(Parent content) {
         mainContent.setCenter(content);
     }

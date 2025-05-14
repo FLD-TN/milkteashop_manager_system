@@ -43,7 +43,7 @@
                             </graphic>
                         </Button>
                         <Separator styleClass="nav-separator"/>
-                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá" >
+                        <Button styleClass="nav-button" text="Quản Lí Hàng Hoá" onAction="#showProductsManage" >
                             <graphic>
                                 <FontIcon iconLiteral="fas-mug-hot" iconSize="20"/>
                             </graphic>
