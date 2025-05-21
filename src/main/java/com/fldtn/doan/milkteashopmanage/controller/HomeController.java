@@ -47,6 +47,17 @@ public class HomeController {
         }
     }
 
+    @FXML
+    public void showOrdersManage(){
+        try {
+            Parent ordersManage = FXMLLoader.load(getClass().getResource("/Layout/Layouts/OrdersManage/OrdersManage.fxml"));
+            mainContent.setCenter(ordersManage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public void setMainContent(Parent content) {
         mainContent.setCenter(content);
     }
